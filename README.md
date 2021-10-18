@@ -1,6 +1,6 @@
 # Strapi cms + nextJs
 
-for develop
+## for develop
 
 strapi start on port 1337
 nextJs start on port 3000
@@ -17,3 +17,13 @@ nextJs start on port 3000
    `http://localhost:1337/admin/plugins/content-manager/singleType/application::app-name.app-name`
 8. [Check frontend](http://localhost:3000/)
 9. Develop your app
+
+## for production
+
+install pm2 globaly
+
+in root folder run `npm run prod`
+
+check process with `pm2 list`
+stop process width `pm2 stop [id]`
+delete proces from list with `pm2 delete [id]`
