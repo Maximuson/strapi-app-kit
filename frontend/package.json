@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "develop": "next dev",
-    "dev": "next dev",
     "build": "next build",
+    "prod": "npm run build && pm2 start ecosystem.config.js",
     "start": "next start",
     "deploy": "next build && next export",
     "lint": "next lint",
