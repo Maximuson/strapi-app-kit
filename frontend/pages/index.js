@@ -1,6 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
 
-const Home = () => {
+const Home = ({ appName }) => {
   const [comets, setComets] = useState([{ degree: 0, size: 8 }]);
 
   function randomIntFromInterval(min, max) {
@@ -36,10 +37,10 @@ const Home = () => {
   return (
     <div className={"welcome"}>
       <h1 className="welcome__greeting" onClick={addComet}>
-        <span className="welcome_app-text">New App</span>
-        <span className="bg-text bg-text-3"> New App</span>
-        <span className="bg-text bg-text-2"> New App</span>
-        <span className="bg-text bg-text-1"> New App</span>
+        <span className="welcome_app-text">{appName}</span>
+        <span className="bg-text bg-text-3"> {appName}</span>
+        <span className="bg-text bg-text-2"> {appName}</span>
+        <span className="bg-text bg-text-1"> {appName}</span>
         {comets.map((item, index) => (
           <div
             className="comet__line"
@@ -64,3 +65,13 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps({ params }) {
+  const response = await axios.get("http://localhost:1337/app-name");
+
+  const name = response.data.name;
+
+  return {
+    props: { appName: name },
+  };
+}

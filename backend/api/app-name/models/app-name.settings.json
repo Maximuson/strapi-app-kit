@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_names",
+  "info": {
+    "name": "App name",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "New App"
+    }
+  }
+}
