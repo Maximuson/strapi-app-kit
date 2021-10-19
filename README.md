@@ -3,7 +3,7 @@
 ## for develop
 
 strapi start on port 1337
-nextJs start on port 3000
+nextJs start on port 8080
 
 1. Delete linked repository `git remote rm origin`
 2. Create DB & [Configure DB](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/configurations.html#database)
