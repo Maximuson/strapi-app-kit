@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "develop:backend": "npm run --prefix backend develop",
-    "develop:frontend": "wait-on http://localhost:1337/admin && npm run --prefix frontend develop",
+    "develop:frontend": "wait-on http://localhost:1337/dashboard && npm run --prefix frontend develop",
     "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
     "prod:backend": "npm run --prefix backend prod",
-    "prod:frontend": "wait-on http://localhost:1337/admin && npm run --prefix frontend prod",
+    "prod:frontend": "wait-on http://localhost:1337/dashboard && npm run --prefix frontend prod",
     "prod": "cross-env FORCE_COLOR=1 npm-run-all -l -p prod:*"
   },
   "keywords": [],

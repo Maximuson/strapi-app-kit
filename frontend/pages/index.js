@@ -67,7 +67,7 @@ const Home = ({ appName }) => {
 export default Home;
 
 export async function getStaticProps({ params }) {
-  const response = await axios.get("http://localhost:1337/app-name");
+  const response = await axios.get("/api/app-name");
 
   const name = response.data.name;
 
